@@ -1,0 +1,32 @@
+<div>
+  <h1>Address Book App</h1>
+  <button class ="button-left"(click)="add()">Add Record</button>
+  <button class="button-right"(click)="delete()">Delete Record</button>
+  <div class="table-container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>City</th>
+          <th>Address</th>
+          <th>State</th>
+          <th>Zip Code</th>
+          <th>Phone Number</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of list">
+          <td>{{item.name}}</td>
+          <td>{{item.city}}</td>
+          <td>{{item.address}}</td>
+          <td>{{item.state}}</td>
+          <td>{{item.zipcode}}</td>
+          <td>{{item.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<router-outlet></router-outlet>
